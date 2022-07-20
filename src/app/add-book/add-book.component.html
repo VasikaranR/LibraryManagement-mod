@@ -1,0 +1,47 @@
+<div class="container">
+    <form [formGroup]="formvalid">
+        <div>
+            <label for="bookId"><b>BookID</b></label>
+            <div>
+                <input type="text"  id="bookId" name="bookId" formControlName="bookId" placeholder="bookId"><br> 
+            </div>
+        </div>
+       
+        <div>
+            <label for="bookname"><b>bookName</b></label>
+            <div>
+                <input type="text"  id="bookname" name="bookname" formControlName="bookname" placeholder="material"><br>  
+            </div>
+        </div>
+
+        <div>
+            <label for="category"><b>category</b></label>
+            <div>
+                <input type="text"  id="category" name="category" formControlName="category" placeholder="category"><br>  
+            </div>
+        </div>
+        <div>
+            <label for="author"><b>Author</b></label>
+            <div>
+                <input type="text"  id="author" name="author" formControlName="author" placeholder="author"><br>  
+            </div>
+        </div>
+        <div>
+            <label for="description"><b>Description</b></label>
+            <div>
+                <textarea  id="description" name="description" formControlName="description" placeholder="description"><br></textarea> 
+            </div>
+        </div>
+        <div class="mb-1">
+            <div class="btn-group" role="group">
+                <button (click)="save(formvalid)" class="btn btn-primary" type="button"> Save</button>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>    
+                 
+                <button class="button-back" (click)="back()" class="btn btn-primary" type="button"> Back</button> 
+            </div>
+        </div>
+
+    </form>
+</div>

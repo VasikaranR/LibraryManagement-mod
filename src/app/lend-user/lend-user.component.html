@@ -1,0 +1,29 @@
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+      <p>DashBoard</p>
+      <button (click)="logout()" id="logout" class="btn  btn-danger">Logout</button>
+    </div>
+  </nav>
+  <table class="table mt-4">
+    <thead>
+        <tr>
+          <th scope="col">User Name</th>
+          <th scope="col">Book Name</th>
+          <th scope="col">Lended Date</th>
+          <th scope="col">Category</th>
+          <th scope="col">Author</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let lend of lendList">
+          <td>{{lend.username}}</td>
+          <td>{{lend.bookname}}</td>
+          <td>{{lend.date.substring(0,10)}}</td>
+          <td>{{lend.bookCategory}}</td>
+          <td>{{lend.bookAuthor}}</td>
+        </tbody>
+
+
+    </table>
+    <p class="back">    <button (click)="back()" class="btn btn-primary">Back</button>
+     </p>
